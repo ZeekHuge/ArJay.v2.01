@@ -1,0 +1,35 @@
+#! /bin/bash
+
+echo "Starting Gradle to build"
+
+FLA=$(gradle --daemon assembleDebug 2>/dev/null | grep "BUILD FAILED" | wc -l)
+
+if [ $FLA -eq 1 ]
+	then 
+		gradle --daemon assembleDebug
+		echo -e '\a'
+		exit 0
+fi
+
+echo "********BUILD SUCCESSFULL********"
+echo "Opening Mobile"
+adb shell input keyevent 03  
+sleep 1
+adb shell input text 1974
+adb shell input keyevent 66
+
+echo "Installing the app"
+
+adb install -r app/build/outputs/apk/app-debug.apk 
+
+echo "App installed"
+echo "Starting the app"
+
+adb shell am start com.wordpress.zubeentolani/.ActivityLevel0
+
+#sleep 15
+
+#echo "Closing mobile"
+#adb shell input keyevent 06
+
+echo -e "\a"

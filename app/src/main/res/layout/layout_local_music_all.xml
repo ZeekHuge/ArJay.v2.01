@@ -1,0 +1,26 @@
+<com.wordpress.zubeentolani.SlidingFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/local_music_all_sliding_frame_layout"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ActivityLevel0">
+
+
+    <com.wordpress.zubeentolani.SlidingListView
+        android:id="@+id/local_music_all_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<com.wordpress.zubeentolani.StretchableImageView-->
+        <!--android:id="@+id/local_music_stretch_image"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="right"-->
+        <!--android:scaleType="center"-->
+        <!--android:src="@drawable/stretch" />-->
+
+</com.wordpress.zubeentolani.SlidingFrameLayout>
+

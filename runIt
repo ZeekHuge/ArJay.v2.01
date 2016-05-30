@@ -15,7 +15,7 @@ echo "********BUILD SUCCESSFULL********"
 echo "Opening Mobile"
 adb shell input keyevent 03  
 sleep 1
-adb shell input text 1974
+adb shell input text ****
 adb shell input keyevent 66
 
 echo "Installing the app"
